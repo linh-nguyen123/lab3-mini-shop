@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">🛍️ Mini Shop</div>
+      <div class="cart-badge">
+        🛒 Cart: <span id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Thanh tìm kiếm & Bộ lọc danh mục -->
+    <section class="controls">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="Search products..."
+        autocomplete="off"
+      >
+      <div class="filter-group" id="filterButtons">
+        <!-- Nút lọc danh mục được tạo bằng JS -->
+      </div>
+    </section>
+
+    <!-- Thanh tổng tiền & Xóa giỏ hàng -->
+    <section class="cart-bar">
+      <div class="cart-total">
+        Total: <strong id="cartTotal">0 ₫</strong>
+      </div>
+      <button type="button" id="clearCartBtn" class="clear-btn">Clear cart</button>
+    </section>
+
+    <!-- Lưới sản phẩm (render hoàn toàn bằng JS) -->
+    <section class="product-grid" id="productGrid"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
